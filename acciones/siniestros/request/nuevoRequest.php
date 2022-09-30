@@ -1,5 +1,5 @@
 <?php
-class Siniestro
+class nuevoRequest
 {
  public $NombreAsegurado;
  public $NroPoliza;

@@ -32,7 +32,7 @@ if ($req->NroPoliza > 1000 or $req->NroPoliza < 0) {
         $resp->Mensaje[] = "Debe indicar al menos un medio de contacto";
     }else {
         foreach ($req->ListMediosContacto as $mc) {
-            if ($mc->MedioContactoDescripcion != 'Celular' or  $mc->MedioContactoDescripcion != 'Email') {
+            if ($mc->MedioContactoDescripcion != 'Celular' &&  $mc->MedioContactoDescripcion != 'Mail') {
                 $resp->IsOk = false;
                 $resp->Mensaje[] = "Debe indicar medios de contacto válidos";
             }
